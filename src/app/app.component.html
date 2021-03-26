@@ -1,10 +1,24 @@
-<h1>hello world</h1>
-<a routerLink="home">Goto Home</a>
-<a routerLink="blog">Goto Blog</a>
+<div class="background">
+    <mat-toolbar [class.mat-elevation-z8]="isActive" color="primary">
+        <div fxHide.gt-xs>
+            <button class="menu" mat-icon-button>
+                <mat-icon>menu</mat-icon>
+            </button>
+        </div>
+        <div>
+            <a class="logo" routerLink=""><img src="assets/logo.png" height="60"></a>
+        </div>
+        <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+            <ul fxLayout fxLayoutGap="10px" class="navigation-items">
+                <li>
+                    <a routerLink="/home">Goto Home</a>
+                </li>
+                <li>
+                    <a routerLink="/blogoverview">Goto Blog Overview</a>
+                </li>
+            </ul>
+        </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
 
-<ul>
-    <li *ngFor="let post of posts$ | async">
-      <a [routerLink]="post.route">{{ post.title }}</a>
-    </li>
-  </ul>
-<router-outlet></router-outlet>
+</div>

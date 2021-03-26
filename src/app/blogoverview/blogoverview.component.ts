@@ -1,18 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-
-import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-
+import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-blogoverview',
+  templateUrl: './blogoverview.component.html',
+  styleUrls: ['./blogoverview.component.css']
 })
-export class AppComponent {
-  title = 'digitize-it';
-  isActive = true;
+export class BlogoverviewComponent implements OnInit {
+
   posts$: Observable<ScullyRoute[]>;
 
   constructor(private srs: ScullyRoutesService) {}
@@ -23,7 +20,7 @@ export class AppComponent {
         let myPosts = routeList.filter((route: ScullyRoute) =>
         route.route.startsWith(`/blog/`),
       );
-      console.log(myPosts)
+      console.log("Posts = ", myPosts)
         return myPosts
       })
     );

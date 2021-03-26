@@ -1,0 +1,28 @@
+<ul>
+    <li *ngFor="let post of posts$ | async">
+        <a [routerLink]="post.route">{{ post.title }}</a>
+    </li>
+</ul>
+<div *ngFor="let post of posts$ | async">
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{post.readTitle}}</mat-card-title>
+      <mat-card-subtitle>{{post.description}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src= "/../assets/blog_images/{{post.BigImage}}" alt="Photo of AWS Services">
+    <mat-card-content>
+      <p>
+        {{post.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>
+        <a [routerLink]="post.route"> 
+          <mat-icon>read_more</mat-icon>
+        </a>
+        </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

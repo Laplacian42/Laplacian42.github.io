@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home.component';
 import { MaterialModule } from './../material.module'
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,7 +13,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes),
-    MaterialModule],
+    MaterialModule,
+  FlexLayoutModule],
   exports: [RouterModule,
     MaterialModule]
 })

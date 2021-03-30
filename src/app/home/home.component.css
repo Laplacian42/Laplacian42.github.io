@@ -6,3 +6,59 @@ img {
     max-width: 200px;
   }
   
+  .me{
+    display: flex;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    width: 800px;
+    
+}
+.me-item{
+    border-radius: 50%;
+    display: flex;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    max-height: 300px;
+    
+}
+
+
+
+  .list{
+    display: flex;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    
+    flex-direction: row;
+    
+}
+.list-item:hover{
+    box-shadow: -1px 10px 29px 0px rgb(0, 0, 0);
+}
+.list-item{
+    background-color: white;
+    margin: 5px;
+    width: 300px;
+    min-height: 100px;
+    transition: 1s ease-out;
+    border-radius: 5px;
+}
+
+.sub{
+    font-size: small;
+}
+.tool{
+    white-space: pre-line;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+
+.box.flex {
+    display: flex;
+    justify-content: center;
+  }
+

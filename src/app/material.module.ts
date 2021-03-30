@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon'
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSortModule } from '@angular/material/sort';
+import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
@@ -17,7 +18,7 @@ import { MatSortModule } from '@angular/material/sort';
     MatRadioModule,
     MatSlideToggleModule,
     MatSortModule,
-
+    MatListModule
   ],
   exports: [
     MatButtonModule,
@@ -26,7 +27,8 @@ import { MatSortModule } from '@angular/material/sort';
     MatCardModule,
     MatRadioModule,
     MatSlideToggleModule,
-    MatSortModule
+    MatSortModule,
+    MatListModule
   ]
 })
 export class MaterialModule {}
